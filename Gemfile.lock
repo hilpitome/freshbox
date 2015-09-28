@@ -31,13 +31,6 @@ GIT
       rails-i18n (~> 4.0.1)
       spree_core (~> 3.0.4)
 
-GIT
-  remote: git://github.com/wolfieorama/spree-sale
-  revision: 0aa901f2673df8ce784cc150788c9888277cee30
-  specs:
-    spree_simple_sales (3.0.4)
-      spree_core (~> 3.0.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -373,7 +366,6 @@ DEPENDENCIES
   spree_auth_devise!
   spree_gateway!
   spree_i18n!
-  spree_simple_sales!
   spring
   turbolinks
   uglifier (>= 1.3.0)
