@@ -27,7 +27,7 @@
           </div>
         </div>
       </header>
-        <div class="container">
+        <!-- <div class="container">
           <nav class="col-md-12">
             <div id="main-nav-bar" class="navbar">
               <ul class="nav navbar-nav navbar-right" data-hook>
@@ -41,23 +41,45 @@
               </ul>
             </div>
           </nav>
-        </div>
+        </div> -->
 
 
     </div>
 
-    <div class="container">
+    <div class=".container">
       <div class="row">
 
         <div class="col-md-12">
-          <%= link_to image_tag("flash.png"), products_path %>
+          <%= link_to image_tag("flash.png"), products_path, id: "flash"  %>
         </div>
-
       </div>
+      <a href="#howitworks"><span class="glyphicon glyphicon-chevron-down" style="text-align: center;" aria-hidden="true"></span></a>
+
+
+      <hr>
+      <div id="howitworks" class="row">
+          <h1><b>How it works</b></h1>
+        <div class="col-md-4">
+          <%= link_to image_tag("selection.png"), products_path %>
+          <p><b>You choose<br> what you like<b><br></p>
+          <p class="moretext">And we will send you<br>fresh fruits and vegetables</p>
+
+        </div>
+        <div class="col-md-4">
+          <%= link_to image_tag("bikeguy.png"), products_path %>
+          <p><b>We deliver to your<br> door for free</b></p>
+          <p class="moretext">so you can skip the stress<br> of the trip to the market</p>
+
+        </div>
+        <div class="col-md-4">
+          <%= link_to image_tag("plate.png"), products_path %>
+          <p><b>You cook a healthy<br> and tasty meal</b></p>
+          <p class="moretext">Don't we all love a<br> delicious meal</p>
+        </div>
+      </div>
+      <br>
+      <hr>
     </div>
-
-
-
 
   </body>
 </html>
