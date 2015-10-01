@@ -6,11 +6,33 @@ ul li {
   margin-right: 10px;
 }
 
-#flash{
-  height:600px;
-  width: 1000px;
-}
-
 .col-md-12{
   text-align: center;
+}
+
+h1{
+  color: green;
+  font-style: italic;
+  font-weight: bolder;
+  font-family: serif;
+}
+
+hr{
+  height: 2px;
+  color:green;
+  border-width: thin;
+}
+
+p{
+  font-size: 24px;
+}
+
+.col-md-4{
+  text-align: center;
+}
+
+.moretext{
+  font-size: 22px;
+  color: grey;
+  font-weight: lighter;
 }
