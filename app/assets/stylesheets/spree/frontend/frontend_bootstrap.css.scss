@@ -1,5 +1,8 @@
 //Add your custom bootstrap variables here, see https://github.com/twbs/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss for full list of variables.
 
+$nav-pills-active-link-hover-bg: rgba(27, 158, 33, 0.7);
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
