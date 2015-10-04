@@ -49,3 +49,7 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_i18n', git: 'git://github.com/spree/spree_i18n.git', branch: '3-0-stable'
 
 gem 'spree_static_content', github: 'spree/spree_static_content', branch: '3-0-stable'
+
+gem 'rails_12factor', group: :production
+
+ruby "2.2.2"
