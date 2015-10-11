@@ -16,3 +16,5 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+
+require 'spree/product_filters'
