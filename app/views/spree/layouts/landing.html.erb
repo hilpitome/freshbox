@@ -13,13 +13,17 @@
     <div id="spree-header">
       <header class="navbar navbar-default navbar-fixed-top" id="header" data-hook>
         <div class = "container">
-        <div class="container">
-          <div class="row">
-            <figure id="logo" class="col-md-4" data-hook>
-              <%= logo %>
-            </figure>
+          <div class="container">
+            <div class="row">
+              <figure id="logo" class="col-md-4" data-hook>
+                <%= logo %>
+              </figure>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "About", products_url %></li>
+                <li><%= link_to "Contact Us", products_url %></li>
+              </ul>
+            </div>
           </div>
-        </div>
       </div>
       </header>
 
@@ -29,7 +33,7 @@
       <div class="row">
 
         <div class="col-md-12">
-          <%= link_to image_tag("flash.png"), products_path, id: "flash"  %>
+
         </div>
       </div>
       <a href="#howitworks"><span id="glylanding" class="glyphicon glyphicon-chevron-down" style="text-align: center;" aria-hidden="true"></span></a>
@@ -40,22 +44,25 @@
           <%= link_to image_tag("selection.png"), products_path %>
 
           <p class="maintext"><b>You choose<br> what you like<b><br></p>
-          <p class="moretext">And we will send you<br>fresh fruits and vegetables</p>
+          <p class="moretext">From the comfort<br>of your home</p>
 
         </div>
-        <div class="col-md-4">
-          <%= link_to image_tag("bikeguy.png"), products_path %>
 
-          <p class="maintext"><b>We deliver to your<br> door for free</b></p>
-          <p class="moretext">So you can skip the stress<br> of the trip to the market</p>
-
-        </div>
         <div class="col-md-4">
           <%= link_to image_tag("plate.png"), products_path %>
 
-          <p class="maintext"><b>You cook a healthy<br> and tasty meal</b></p>
-          <p class="moretext">Don't we all love a<br> delicious meal ?</p>
+          <p class="maintext"><b>We go shop<br> as per you preference </b></p>
+          <p class="moretext">So you can skip the stress<br> of the trip to the supermarket</p>
         </div>
+
+        <div class="col-md-4">
+          <%= link_to image_tag("bikeguy.png"), products_path %>
+
+          <p class="maintext"><b>We deliver right <br> to your door step </b></p>
+          <p class="moretext">So you dont que<br> at the mall and in traffic</p>
+
+        </div>
+
       </div>
       <hr>
       <div id="footer" class="row">
