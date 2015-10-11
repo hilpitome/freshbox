@@ -1,6 +1,6 @@
 #bodylanding{
-  background-image: image-url('bg.jpg');
-  background-repeat: no-repeat;
+  // background-image: image-url('bg.jpg');
+  // background-repeat: no-repeat;
   background-size: 100%;
   padding-top: 90px;
 }
@@ -14,7 +14,7 @@ body {
 }
 
 h1{
-  color: white;
+  color: black;
   font-style: italic;
   font-weight: bolder;
   font-family: serif;
@@ -31,7 +31,7 @@ hr{
 .maintext{
   font-size: 24px;
   color: white;
-  background-color: rgba(210, 105, 30, 0.6);
+  background-color: rgba(27, 158, 33, 0.7);
   border-radius: 10px;
   padding: 10px;
 }
@@ -44,21 +44,17 @@ hr{
   font-size: 22px;
   color: white;
   font-weight: lighter;
-  background-color: rgba(210, 105, 30, 0.6);
+  background-color: rgba(27, 158, 33, 0.7);
   border-radius: 10px;
   padding: 10px;
 }
 
 #howitworks{
-  background-image: image-url('bg.jpg');
-  background-repeat: no-repeat;
+  // background-image: image-url('bg.jpg');
+  // background-repeat: no-repeat;
   background-size: 100%;
 }
-d
-#flash{
-  width: 100%;
-  height: 100%;
-}
+
 
 #glylanding{
   font-size: 50px;
