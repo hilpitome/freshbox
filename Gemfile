@@ -43,7 +43,6 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'aws-s3'
 gem 'aws-sdk'
 
 gem 'spree', '3.0.4'
@@ -54,8 +53,6 @@ gem 'spree_i18n', git: 'git://github.com/spree/spree_i18n.git', branch: '3-0-sta
 gem 'spree_static_content', github: 'spree/spree_static_content', branch: '3-0-stable'
 
 gem 'spree_quick_view', github: 'ronzalo/spree_quick_view'
-
-gem 'spree_heroku', '1.0.0', :git => 'git://github.com/biow0lf/spree-heroku.git'
 
 gem 'rails_12factor', group: :production
 
