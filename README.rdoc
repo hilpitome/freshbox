@@ -1,17 +1,15 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Freshbox
+An online Ecommerce shopping logitics web app 
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.2.2
 
-* System dependencies
+* System dependencies - check gemfile
 
 * Configuration
 
-* Database creation
+* Database creation postgres
 
 * Database initialization
 
