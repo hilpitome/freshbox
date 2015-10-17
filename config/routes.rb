@@ -9,55 +9,37 @@ Rails.application.routes.draw do
           # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root :to => 'home#index'
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  resources :products, :only => [:index, :show]
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  get '/locale/set', :to => 'locale#set'
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # non-restful checkout stuff
+  patch '/checkout/update/:state', :to => 'checkout#update', :as => :update_checkout
+  get '/checkout/:state', :to => 'checkout#edit', :as => :checkout_state
+  get '/checkout', :to => 'checkout#edit' , :as => :checkout
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  populate_redirect = redirect do |params, request|
+    request.flash[:error] = Spree.t(:populate_get_error)
+    request.referer || '/cart'
+  end
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  get '/orders/populate', :to => populate_redirect
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+  resources :orders, :except => [:index, :new, :create, :destroy] do
+    post :populate, :on => :collection
+  end
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+  get '/cart', :to => 'orders#edit', :as => :cart
+  patch '/cart', :to => 'orders#update', :as => :update_cart
+  put '/cart/empty', :to => 'orders#empty', :as => :empty_cart
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  # route globbing for pretty nested taxon and product paths
+  get '/t/*id', :to => 'taxons#show', :as => :nested_taxons
+
+  get '/unauthorized', :to => 'home#unauthorized', :as => :unauthorized
+  get '/content/cvv', :to => 'content#cvv', :as => :cvv
+  get '/content/*path', :to => 'content#show', :as => :content
+  get '/cart_link', :to => 'store#cart_link', :as => :cart_link
 end

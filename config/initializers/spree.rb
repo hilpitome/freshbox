@@ -18,3 +18,5 @@ end
 Spree.user_class = "Spree::User"
 
 require 'spree/product_filters'
+
+Spree::SocialConfig[:path_prefix] = ''        # for /auth/:provider

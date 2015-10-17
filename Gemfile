@@ -61,6 +61,8 @@ gem 'spree_static_content', github: 'spree/spree_static_content', branch: '3-0-s
 
 gem 'spree_quick_view', github: 'ronzalo/spree_quick_view'
 
+gem 'spree_social', github: 'spree-contrib/spree_social', branch: '3-0-stable'
+
 gem 'rails_12factor', group: :production
 
 ruby "2.2.2"
